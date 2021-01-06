@@ -101,6 +101,7 @@ resource "kubernetes_cluster_role" "haproxy" {
 
 resource "kubernetes_cluster_role_binding" "haproxy" {
   metadata {
+    name      = "${var.name}-role-binding"
 
     labels = {
       "app.kubernetes.io/name"       = var.name
