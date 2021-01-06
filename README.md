@@ -7,7 +7,7 @@ In AWS, this will trigger kubernetes ingress to create target groups required to
 ### Sample usage
 
 ```
-module nginx-ingress-controller {
+module haproxy-ingress-controller {
   source  = "github.com/sanarena/terraform-kubernetes-haproxy-ingress-controller"
   # however recommended way is to add this repository as a submodule
 
