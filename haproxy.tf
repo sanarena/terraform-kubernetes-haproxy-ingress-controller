@@ -132,7 +132,6 @@ resource "kubernetes_deployment" "haproxy" {
       "run"                          = "${var.name}-default-backend"
       "app.kubernetes.io/name"       = var.name
       "app.kubernetes.io/part-of"    = kubernetes_namespace.haproxy.metadata.0.name
-      "app.kubernetes.io/version"    = "v${var.haproxy_ingress_controller_version}"
       "app.kubernetes.io/managed-by" = "terraform"
     }
   }
@@ -265,7 +264,6 @@ resource "kubernetes_deployment" "ingress" {
       "run"                          = "${var.name}-ingress"
       "app.kubernetes.io/name"       = var.name
       "app.kubernetes.io/part-of"    = kubernetes_namespace.haproxy.metadata.0.name
-      "app.kubernetes.io/version"    = "v${var.haproxy_ingress_controller_version}"
       "app.kubernetes.io/managed-by" = "terraform"
     }
   }
